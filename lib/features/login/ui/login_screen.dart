@@ -1,9 +1,8 @@
 import 'package:docdoc/core/helpers/spacing.dart';
 import 'package:docdoc/core/theming/styles.dart';
 import 'package:docdoc/core/widgets/app_text_button.dart';
-import 'package:docdoc/features/login/data/models/login_request_body.dart';
 import 'package:docdoc/features/login/logic/cubit/login_cubit.dart';
-import 'package:docdoc/features/login/ui/widgets/already_have_account_text.dart';
+import 'package:docdoc/features/login/ui/widgets/donot_have_account_text.dart';
 import 'package:docdoc/features/login/ui/widgets/email_and_password.dart';
 import 'package:docdoc/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:docdoc/features/login/ui/widgets/terms_and_conditions_text.dart';
@@ -11,14 +10,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     verticalSpace(16),
                     const TermsAndConditionsText(),
                     verticalSpace(60),
-                    const AlreadyHaveAccountText(),
+                    const DoNotHaveAccountText(),
                     const LoginBlocListener(),
                   ],
                 ),
@@ -74,12 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formkey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginStates(
-        LoginRequestBody(
-          email: context.read<LoginCubit>().emailController.text,
-          password: context.read<LoginCubit>().passwordController.text,
-        ),
-      );
+      context.read<LoginCubit>().emitLoginStates();
     }
   }
 }
