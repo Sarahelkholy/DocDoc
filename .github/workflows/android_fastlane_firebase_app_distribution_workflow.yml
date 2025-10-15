@@ -55,10 +55,10 @@ jobs:
         working-directory: android
         run: |
           bundle install --jobs 4 --retry 3 --verbose
-
+ 
       - name: Build and Distribute App via Fastlane
         working-directory: android
         env:
-          FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_TOKEN }}   # map secret to what Fastfile expects
+          FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}  
         run: |
           bundle exec fastlane android firebase_distribution
