@@ -61,6 +61,9 @@ dependencies:
   # for adapting screen and font szie
   flutter_screenutil: ^5.9.3
   firebase_core: ^4.2.0
+  # Flutter library to load and cache network images
+  cached_network_image: ^3.4.1
+
 
 
 
