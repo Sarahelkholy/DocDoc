@@ -6,9 +6,9 @@ part 'specialization_response_model.g.dart';
 @JsonSerializable()
 class SpecializationResponseModel {
   @JsonKey(name: 'data')
-  List<SpecializationData?>? specializationData;
+  List<SpecializationData?>? specializationDataList;
 
-  SpecializationResponseModel({this.specializationData});
+  SpecializationResponseModel({this.specializationDataList});
 
   factory SpecializationResponseModel.fromJson(Map<String, dynamic> json) =>
       _$SpecializationResponseModelFromJson(json);

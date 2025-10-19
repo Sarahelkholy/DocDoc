@@ -9,7 +9,7 @@ part of 'specialization_response_model.dart';
 SpecializationResponseModel _$SpecializationResponseModelFromJson(
   Map<String, dynamic> json,
 ) => SpecializationResponseModel(
-  specializationData: (json['data'] as List<dynamic>?)
+  specializationDataList: (json['data'] as List<dynamic>?)
       ?.map(
         (e) => e == null
             ? null
@@ -20,7 +20,7 @@ SpecializationResponseModel _$SpecializationResponseModelFromJson(
 
 Map<String, dynamic> _$SpecializationResponseModelToJson(
   SpecializationResponseModel instance,
-) => <String, dynamic>{'data': instance.specializationData};
+) => <String, dynamic>{'data': instance.specializationDataList};
 
 SpecializationData _$SpecializationDataFromJson(Map<String, dynamic> json) =>
     SpecializationData(

@@ -67,6 +67,12 @@ class TextStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
+  static TextStyle font14DarkBlueBold = TextStyle(
+    fontSize: 14.sp,
+    color: ColorsManager.darkBlue,
+    fontWeight: FontWeightHelper.bold,
+  );
+
   static TextStyle font16DarkBlueBold = TextStyle(
     fontSize: 16.sp,
     color: ColorsManager.darkBlue,
