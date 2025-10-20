@@ -13,7 +13,7 @@ Key technologies:
 
 Flutter (Dart)
 
-Firebase (project configuration present)
+Firebase (authentication & project configuration present)
 
 GitHub Actions CI workflows
 
