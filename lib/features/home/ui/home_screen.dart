@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
           child: Column(
             children: [
-              const HomeTopBar(),
+              HomeTopBar(),
               const DoctorBlueContainer(),
               verticalSpace(24),
               const DoctorSpecialitySeeAll(),
